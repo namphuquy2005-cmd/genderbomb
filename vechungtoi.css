@@ -244,24 +244,20 @@ footer p{
 
 @media(max-width:768px){
 
-    .hero-content h1{
-        font-size:40px;
-    }
-
-    .hero-content p{
-        font-size:16px;
-    }
-
     nav{
         display:none;
     }
 
-    .quote h2{
-        font-size:28px;
+    .hero-content h1{
+        font-size:40px;
     }
 
-    .section-title h2{
-        font-size:32px;
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:28px;
     }
 
 }
