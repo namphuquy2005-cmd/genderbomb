@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg-cream:#FAF3E0;
+    --bg-warm:#F5E6C8;
+    --bg-card:#FFFDF7;
+    --text-dark:#2C2419;
+    --text-body:#4A3F35;
+    --text-muted:#6B5D4F;
+    --gold:#C9A227;
+    --gold-light:#D4AF37;
+    --gold-dark:#8B6914;
+    --gold-accent:#B8860B;
+    --border-gold:rgba(201,162,39,0.25);
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg-cream);
+    color:var(--text-dark);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(250,243,224,0.92);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    border-bottom:1px solid var(--border-gold);
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:var(--gold-dark);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:var(--text-dark);
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold-accent);
+}
+
+.product{
+    padding:140px 0 80px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.product-image img{
+    width:100%;
+    border-radius:20px;
+    border:1px solid var(--border-gold);
+    box-shadow:0 8px 30px rgba(139,105,20,0.12);
+}
+
+.category{
+    color:var(--gold-accent);
+    font-weight:600;
+}
+
+.product-info h1{
+    font-size:55px;
+    margin-top:10px;
+    color:var(--gold-dark);
+}
+
+.product-info h3{
+    color:var(--text-muted);
+    margin:10px 0 20px;
+}
+
+.price{
+    font-size:36px;
+    color:var(--gold-dark);
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.description{
+    line-height:1.8;
+    color:var(--text-body);
+    margin-bottom:30px;
+}
+
+.size-section,
+.quantity-section{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+    color:var(--text-dark);
+    font-weight:500;
+}
+
+select,
+input{
+    width:100%;
+    padding:15px;
+    border:1px solid var(--border-gold);
+    border-radius:10px;
+    background:var(--bg-card);
+    color:var(--text-dark);
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.buy-btn,
+.cart-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.buy-btn{
+    background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+    color:#FFFDF7;
+    box-shadow:0 4px 15px rgba(139,105,20,0.35);
+}
+
+.buy-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(139,105,20,0.45);
+}
+
+.cart-btn{
+    background:var(--bg-card);
+    color:var(--text-dark);
+    border:1px solid var(--border-gold);
+}
+
+.cart-btn:hover{
+    background:var(--bg-warm);
+}
+
+.details{
+    padding:80px 0;
+    background:var(--bg-warm);
+}
+
+.details h2,
+.performance h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+    color:var(--gold-dark);
+}
+
+.detail-grid,
+.performance-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.detail-box,
+.performance-card{
+    background:var(--bg-card);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid var(--border-gold);
+    box-shadow:0 4px 20px rgba(139,105,20,0.08);
+}
+
+.detail-box h3,
+.performance-card h3{
+    color:var(--gold-dark);
+    margin-bottom:15px;
+}
+
+.detail-box p,
+.performance-card p{
+    color:var(--text-body);
+    line-height:1.8;
+}
+
+.performance{
+    padding-bottom:100px;
+    background:var(--bg-cream);
+}
+
+@media(max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-info h1{
+        font-size:40px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+}
