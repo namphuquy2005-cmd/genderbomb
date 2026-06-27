@@ -118,6 +118,7 @@ nav a:hover,
 .story{
     padding:100px 0;
     background:var(--bg-cream);
+    text-align: center;
 }
 
 .section-title{
@@ -145,6 +146,7 @@ nav a:hover,
 .mission{
     padding:80px 0;
     background:var(--bg-warm);
+    text-align: center;
 }
 
 .mission-grid{
